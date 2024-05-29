@@ -1,0 +1,90 @@
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.card2 {
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  perspective: 1000px;
+}
+
+.card2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card2:hover .card2-inner {
+  transform: rotateY(180deg);
+}
+
+.card2-front,
+.card2-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card2-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card2-back {
+  transform: rotateY(180deg);
+}
+
+.btn2 {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+/* Стили для секции-героя */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #333;
+  color: black;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  animation: hero-title-animation 3s ease-in-out infinite;
+}
+
+/* Анимация для заголовка */
+@keyframes hero-title-animation {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 20px rgba(222, 222, 222, 0.5);
+  }
+  50% {
+    transform: translateY(-20px);
+    text-shadow: 0 0 40px rgba(222, 222, 222, 0.8);
+  }
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 0 20px rgba(222, 222, 222, 0.5);
+  }
+}

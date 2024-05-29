@@ -1,0 +1,16 @@
+.blok_conteiner {
+  width: 2000px;
+  height: 3000px;
+  display: flex;
+  justify-content: center;
+}
+.blok1 {
+  width: 200px;
+  height: 300px;
+  border: 2px solid green;
+}
+.blok2 {
+  width: 200px;
+  height: 300px;
+  border: 2px solid red;
+}
